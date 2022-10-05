@@ -1,0 +1,37 @@
+package com.green.sbb.answer;
+
+import java.time.LocalDateTime;
+import java.util.Optional;
+
+import org.springframework.stereotype.Service;
+
+import com.green.sbb.DataNotFoundException;
+import com.green.sbb.question.Question;
+
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor
+@Service
+public class AnswerService {
+	
+	private final AnswerRepository answerRepository;
+	
+	public void create(Question question, String content) {
+		Answer answer = new Answer();
+		answer.setContent(content);
+		answer.setCreateDate(LocalDateTime.now());
+		answer.setQuestion(question);
+		this.answerRepository.save(answer);
+	}
+	
+	public void delete(Integer id) {
+		Optional<Answer> answer = this.answerRepository.findById(id);
+		if(answer.isPresent()) {
+			this.answerRepository.delete(answer.get());
+		}
+		else {
+			throw new DataNotFoundException("answer not found");
+		}
+	}
+	
+}

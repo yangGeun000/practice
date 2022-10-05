@@ -1,0 +1,20 @@
+package green.spring.hello;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class Student {
+	private String name;
+	private int korean;
+	private int english;
+	private int math;
+	
+	public int total() {
+		return korean+english+math;
+	}
+	public int avg() {
+		return (korean+english+math)/3;
+	}
+}

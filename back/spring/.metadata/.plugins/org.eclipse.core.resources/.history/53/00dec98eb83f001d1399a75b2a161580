@@ -1,0 +1,31 @@
+<html layout:decorate="~{layout}">
+
+<div layout:fragment="content" class="container my-3">
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>작성일시</th>
+                <th>댓글수</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="question, loop : ${questionList}">
+                <td>[[${loop.count}]]</td>
+                <td>
+                    <a th:href="@{|/question/detail/${question.id}|}">[[${question.subject}]]</a>
+                </td>
+                <td>[[${#temporals.format(question.createDate,'yyyy-MM-dd HH:mm')}]]</td>
+                <td>[[${question.answerList.size()}]]</td>
+            </tr>
+        </tbody>
+    </table>
+    <form th:action="@{/question/create}" th:object="${questionForm}" method="post" class="my-3">
+        <input type="text" name="subject" id="subject" placeholder="제목" class="form-control my-3" />
+        <textarea name="content" id="content" rows="5" class="form-control" placeholder="내용"></textarea>
+        <input type="submit" value="게시글등록" class="btn btn-primary my-2" style="float: right" />
+    </form>
+</div>
+
+</html>

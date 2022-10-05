@@ -1,0 +1,24 @@
+<html layout:decorate="~{layout}">
+<div layout:fragment="content" class="container">
+
+    <h5 class="my-3 border-bottom pb-2 d-flex justify-content-between align-items-end">
+    	댓글 수정
+    	<a th:href="@{|/question/detail/${question.id}|}" class="btn btn-primary p-1">취소</a>
+    </h5>
+
+    <form th:action="@{|/answer/update/${id}|}" th:object="${answerForm}" method="post">
+
+        <div th:replace="form_errors :: formErrorsFragment"></div>
+
+        <div class="mb-3">
+            <label for="content" class="form-labbel">내용</label>
+            <textarea th:field="*{content}" rows="5" class="form-control"></textarea>
+        </div>
+
+        <input type="submit" value="수정" class="btn btn-primary my-2" style="float:right">
+
+    </form>
+
+</div>
+
+</html>
