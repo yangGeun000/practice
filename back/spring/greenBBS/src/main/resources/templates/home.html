@@ -1,5 +1,96 @@
-<h1>[[${msg}]]greeting</h1>
+<!DOCTYPE html>
+<html lang="ko">
 
-<img src="../static/images/sky.jpg">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*reset*/
+        * {
+            margin: 0 auto;
+            padding: 0;
+        }
 
-<img th:src="@{/images/sky.jpg}">
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /*layout*/
+        body {
+            font-family: 'NanumSquare', sans-serif !important;
+        }
+
+        .wrap {
+            width: 700px;
+            text-align: center;
+        }
+
+        .top {
+            background: #eee;
+            padding: 50px 0;
+        }
+
+        .top h1 {
+            font-size: 55px;
+            font-weight: 200;
+            letter-spacing: -3px;
+            margin-bottom: 30px;
+        }
+
+        .top h1 span {
+            color: #6348ef;
+        }
+
+        .top p {
+            margin-left: -35px;
+        }
+
+        .bottom {
+            background: #39404a;
+            padding: 50px 0;
+        }
+
+        .bottom h2 {
+            font-size: 35px;
+            font-weight: 200;
+            color: #fff;
+        }
+
+        .bottom p {
+            margin: 20px 0 30px;
+        }
+
+        .bottom a {
+            background-color: #6348ef;
+            background-image: url(images/img_03.png);
+            background-repeat: no-repeat;
+            background-position: left 45px center;
+            background-size: 25px;
+            padding: 18px 80px;
+            border-radius: 30px;
+            font-size: 20px;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="top">
+            <h1><span>포인트</span>가 도착했어요</h1>
+            <p><img src="/images/img_01.png"></p>
+        </div>
+        <div class="bottom">
+            <h2>
+                지금 강의를 시청하는<br>모든분께 포인트를 드려요!
+            </h2>
+            <p><img src="/images/img_02.png"></p>
+            <a href="#">영상 시청하고 포인트 받기</a>
+        </div>
+    </div>
+</body>
+
+</html>

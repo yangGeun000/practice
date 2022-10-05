@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" th:href="@{/bootstrap.min.css}">
+</head>
+
+<body>
+    <div class="container my-3">
+
+        <table class="table">
+            <tr class="table-dark">
+                <td>우편번호</td>
+                <td>위치</td>
+            </tr>
+            <tr>
+                <td>[[${member.address.postCode}]]</td>
+                <td>[[${member.address.location}]]</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

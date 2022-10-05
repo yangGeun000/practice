@@ -14,9 +14,22 @@ public class MainController {
 		return "greenBBS";
 	}
 	
+	@RequestMapping("/member_address")
+	public String memberAndAddress(Model model) {
+		Address a = new Address();
+		a.setPostCode("080901");
+		a.setLocation("부산");
+		Member m = new Member();
+		m.setUserId("test");
+		m.setPassword("1234");
+		m.setAddress(a);
+		model.addAttribute("member",m);
+		
+		return "member_address";
+	}
+	
 	@RequestMapping("/home")
-	public String home(Model model) {
-		model.addAttribute("msg","hello ");
+	public String index() {
 		return "home";
 	}
 }
