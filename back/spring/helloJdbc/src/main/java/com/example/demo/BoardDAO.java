@@ -29,27 +29,40 @@ public class BoardDAO {
 					   + "where boardNo > 0 "
 					   + "order by boardNo desc, reg_date DESC ";
 		
+//		List<Board> results = jdbcTemplate.query(
+//				listSql,
+//				new RowMapper<Board>() {
+//					
+//					@Override
+//					public Board mapRow(ResultSet rs, int rowNum) throws SQLException{
+//						Board board = new Board();
+//						
+//						board.setBoardNo(rs.getInt("boardNo"));
+//						board.setSubject(rs.getString("subject"));
+//						board.setContent(rs.getString("content"));
+//						board.setWriter(rs.getString("writer"));
+//						
+//						Timestamp timestamp = rs.getTimestamp("reg_date");
+//						board.setRegDate(timestamp.toLocalDateTime());
+//						
+//						return board;
+//					}
+//				});
+		
+		// 람다식 적용
 		List<Board> results = jdbcTemplate.query(
 				listSql,
-				new RowMapper<Board>() {
-					
-					@Override
-					public Board mapRow(ResultSet rs, int rowNum) throws SQLException{
-						Board board = new Board();
-						
-						board.setBoardNo(rs.getInt("boardNo"));
-						board.setSubject(rs.getString("subject"));
-						board.setContent(rs.getString("content"));
-						board.setWriter(rs.getString("writer"));
-						
-						Timestamp timestamp = rs.getTimestamp("reg_date");
-						board.setRegDate(timestamp.toLocalDateTime());
-						
-						return board;
-					}
-				});
+				(rs, rowNum) -> new Board(
+						rs.getInt("boardNo"),
+						rs.getString("subject"),
+						rs.getString("content"),
+						rs.getString("writer"),
+						rs.getTimestamp("reg_date").toLocalDateTime()
+					)
+				);
 		
-			return results;
-		}
+		
+		return results;
+	}
 }
 

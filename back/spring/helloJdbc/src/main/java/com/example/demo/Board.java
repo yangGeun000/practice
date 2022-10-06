@@ -2,13 +2,17 @@ package com.example.demo;
 
 import java.time.LocalDateTime;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
 @Getter
 @Setter
 @ToString
+@AllArgsConstructor
+@NoArgsConstructor
 public class Board {
 	// 게시글 번호
 	private int boardNo;
@@ -24,4 +28,5 @@ public class Board {
 	
 	// 작성날짜
 	private LocalDateTime regDate;
+	
 }
