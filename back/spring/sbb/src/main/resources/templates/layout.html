@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <link rel="stylesheet" th:href="@{/bootstrap.min.css}">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <link rel="stylesheet" th:href="@{/bootstrap.min.css}" />
     <title>CURD TEST</title>
 </head>
+
 <body>
+    <!-- 네비게이션 바 -->
+    <nav th:replace="navbar :: navbarFragment"></nav>
+    <!-- 템플릿 삽입내용 -->
     <th:block layout:fragment="content"></th:block>
+    <script th:src="@{/bootstrap.min.js}"></script>
 </body>
+
 </html>
