@@ -1,42 +1,23 @@
 package com.green.sbb;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-import java.time.LocalDateTime;
-
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.green.sbb.question.Question;
-import com.green.sbb.question.QuestionRepository;
+import com.green.sbb.question.QuestionService;
 
 @SpringBootTest
 class SbbApplicationTests {
 
 	@Autowired
-	private QuestionRepository questionRepository;
+	private QuestionService questionService;
 	
 	@Test
-	void testInsertQuesion() {
-		Question q = new Question();
-		q.setSubject("게시판");
-		q.setContent("낙서장");
-		q.setCreateDate(LocalDateTime.now());
-		this.questionRepository.save(q);
-	}
-	
-	@Test
-	void testFindBySubject() {
-		Question q = this.questionRepository.findBySubject("게시판");
-		assertEquals("게시판",q.getSubject());
-	}
-	
-	@Test
-	void testUpdateQuesion() {
-		Question q = this.questionRepository.findBySubject("게시판");
-		q.setSubject("방명록");
-		q.setContent("게스트북");
-		this.questionRepository.save(q);
-	}
+	void testJpa() {
+        for (int i = 1; i <= 300; i++) {
+            String subject = String.format("테스트 데이터입니다:[%03d]", i);
+            String content = "내용무";
+            this.questionService.create(subject, content);
+        }
+    }
 }
