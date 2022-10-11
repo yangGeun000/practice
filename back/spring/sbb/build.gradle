@@ -13,16 +13,26 @@ repositories {
 }
 
 dependencies {
+	// 스프링 웹
 	implementation 		'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 	'org.springframework.boot:spring-boot-starter-test'
+	// 스프링 DevTool
 	developmentOnly 	'org.springframework.boot:spring-boot-devtools'
+	// Lombok
 	compileOnly 		'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
+	// H2 데이터베이스
 	runtimeOnly			'com.h2database:h2'
+	// JPA
 	implementation		'org.springframework.boot:spring-boot-starter-data-jpa'
+	// 타임리프
 	implementation		'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation		'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
+	// Validation 라이브러리 (검증 어노테이션 사용)
 	implementation		'org.springframework.boot:spring-boot-starter-validation'
+	// 스프링 시큐리티
+	implementation 		'org.springframework.boot:spring-boot-starter-security'
+    implementation 		'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
 }
 
 tasks.named('test') {
