@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .ball {
+            width: 100px;
+            height: 100px;
+            background: blue;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button id="top">top</button>
+        <button id="bottom">bottom</button>
+        <div class="ball"></div>
+    </div>
+    <script>
+        window.addEventListener('load', function () {
+            var y = 50; //공을 움직이기 위한 변수를 선언
+            var topBtn = document.querySelector('#top'),
+                bottomBtn = document.querySelector('#bottom'),
+                ball = document.querySelector('.ball');
+
+            ball.style.marginTop = y + 'px'; // ball 초기값 설정
+
+            topBtn.addEventListener('click',function(){
+                y = y - 30;
+                ball.style.marginTop = y + 'px';
+            }) // top버튼 이벤트
+            bottomBtn.addEventListener('click',function(){
+                y = y + 30;
+                ball.style.marginTop = y + 'px';
+            })// bottom버튼 이벤트
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>슬릭</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" /> <!-- slick css 연결 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" /> <!-- 아이콘 css 연결 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="영역">
+        <div class="slick">
+            <div><img src="img/img1.jpg" alt="이미지"></div>
+            <div><img src="img/img2.jpg" alt="이미지"></div>
+            <div><img src="img/img3.jpg" alt="이미지"></div>
+            <div><img src="img/img4.jpg" alt="이미지"></div>
+        </div>
+        <div class="fontawesome">
+            <i class="fas fa-ad"></i>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> <!-- jquery 연결 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script> <!-- slick jquery 연결 -->
+    <script>
+        $(document).ready(function () {
+            $('.slick').slick({
+                dots: true
+            });
+        });
+    </script>
+</body>
+
+</html>

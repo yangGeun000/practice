@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST4</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        body {
+            background-image: url(img.jpg);
+            background-size: cover;
+            /* 배경 우선으로 설정. 넓이를 맞추고 이후 높이를 커버. 남는 부분은 잘림 */
+        }
+
+        .영자 {
+            color: rgb(0, 0, 0);
+            background-color: aqua;
+            width: 300px;
+            margin: auto;
+            text-align: center;
+            padding: 20px 20px 20px 60px;
+            /* padding: 상 오른 아래 왼
+            padding: 상 좌우 아래 
+            padding: 상하 좌우
+            padding: 상하좌우 */
+            letter-spacing: 60px;
+            border: 2px double rgb(143, 204, 220);
+            box-sizing: border-box;
+            background-image: url(img.jpg);
+            background-size: 100%;
+            /* 이미지 우선으로 설정 */
+            background-repeat: no-repeat;
+        }
+        .영자:hover{
+            background-position: center;
+            transition: 0.5s; 
+            /* 애니메이션 시간 부여. 부드러운 동작 */
+            background-size: 140%;
+            /* hover -> 마우스를 올리면 주어진 명령 실행 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="영자">하늘</div>
+</body>
+
+</html>

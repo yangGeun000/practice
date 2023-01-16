@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 변수에 함수넣기
+        var tmp = function(){
+            console.log("화살표함수 실행");
+        };
+        //화살표함수 =>
+        var noname = ()=>{console.log("화살표함수 실행");};
+        noname();
+
+        // 매개변수 하나일때
+        // var 기본함수 = function(str){
+        //     return str;
+        // };
+        // var 기본함수 = (str) => {return str;};
+        // 매개변수가 하나일 때만 ()생략가능
+        var 기본함수 = str => str;
+
+        var value = 기본함수('글자입니다.');
+        document.write(value);
+    </script>
+</body>
+</html>

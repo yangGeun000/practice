@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+}
+
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.fontawesome {
+    text-align: center;
+}
+
+.fontawesome i {
+    color: blue;
+    font-size: 30px;
+}
+
+.영역 {
+    padding-top: 20px;
+    width: 60vw;margin: 0 auto;
+    /* vw 뷰포트: 보이는 화면 */
+}
+
+.영역 .slick {}
+
+.영역 .slick>img {
+    position: absolute;
+}
+
+.영역 .slick .slick-arrow {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-100%);
+    font-size: 0;
+    line-height: 1;
+    border: none;
+    width: 30px;
+    height: 30px;
+    background: none;
+}
+
+.영역 .slick .slick-prev {
+    z-index: 100;
+    /* z축 이동 */
+    left: 5%;
+}
+
+.영역 .slick .slick-prev:before {
+    content: "\f053";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 30px;
+    color: #fff;
+
+}
+
+.영역 .slick .slick-next {
+    left: auto;
+    /* auto 값 초기화 */
+    right: 5%;
+}
+
+.영역 .slick .slick-next:before {
+    content: "\f054";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 30px;
+    color: #fff;
+}
+
+.영역 .slick .slick-dots {
+    position: absolute;
+    /* absolute 설정으로 인해 속성에 변화가 일어나 자식의 공간만 차지, 자식이 float를 가져도 깨지지 않고 공간을 다시 설정한다. */
+    left: 50%;transform: translateX(-55%);
+    bottom: 10px;
+}
+
+.영역 .slick .slick-dots li {
+    float: left;
+    list-style: none;
+    /* li의 스타일을 없앰 */
+    width: 12px;
+    height: 12px;
+    background-color: #dedede;
+    border-radius: 50%; 
+    cursor: pointer;
+    margin: 0 5px;
+}
+.영역 .slick .slick-dots li.slick-active {
+    background-color: #222;
+    width: 22px;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+
+.영역 .slick .slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    border: none;
+    background: none;
+}

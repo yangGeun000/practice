@@ -1,0 +1,169 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.clear:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.부모1 {
+    background-color: rgb(0, 162, 255);
+    width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.부모2 {
+    background-color: rgb(0, 162, 255);
+    width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.부모1 .자식1 {
+    background-color: rgb(38, 152, 160);
+    width: 32%;
+    height: 21px;
+    float: left;
+    padding: 40px 0;
+    margin-right: 2%;
+    position: relative;
+    background-image: url(https://static-cse.canva.com/blob/828310/1600w-rssvAb9JL4I.jpg);
+    background-size: 108px;
+}
+
+.부모1 .자식1 .나쁜자식 {
+    position: absolute;
+    background-color: rgb(216, 255, 21);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ83ETACt9bI6qM114g1KUGJIOFMB1CK0SsLw&usqp=CAU);
+    transform: scaleX(0);
+    transition: 1s;
+}
+
+.부모1 .자식1:hover .나쁜자식 {
+    transform: scaleX(1);
+}
+
+.부모1 .자식2 {
+    background-color: rgb(84, 130, 162);
+    width: 32%;
+    float: left;
+    padding: 40px 0;
+    margin-right: 2%;
+    height: 21px;
+    position: relative;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTagwDi66iCBM8cGrgF4Ke4LQK9cnuV6N53sA&usqp=CAU);
+}
+
+.부모1 .자식2 .나쁜자식 {
+    background-color: rgb(49, 128, 161);
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5irbQW10419-b3MHQ9ZD2Wus4DZ1nSs8e-w&usqp=CAU);
+    background-position: center;
+    opacity: 0;
+    /* 투명도 */
+    transition: 1s;
+}
+
+.부모1 .자식2:hover .나쁜자식 {
+    opacity: 1;
+}
+
+.부모1 .자식3 {
+    background-color: rgb(0, 0, 0);
+    width: 32%;
+    height: 21px;
+    float: left;
+    padding: 40px 0;
+    position: relative;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_4Qeik-QovZd-6OcITcf2AxNjZPj8g3Lszg&usqp=CAU);
+    background-position: center;
+    overflow: hidden;
+}
+
+.부모1 .자식3 .나쁜자식 {
+    background-color: rgb(49, 128, 161);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: -100%;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5irbQW10419-b3MHQ9ZD2Wus4DZ1nSs8e-w&usqp=CAU);
+    background-position: center;
+    transition: 1s;
+}
+
+.부모1 .자식3:hover .나쁜자식 {
+    bottom: 0;
+}
+
+.부모2 .강아지1 {
+    background-color: rgb(84, 130, 162);
+    color: aliceblue;
+    width: 49%;
+    float: left;
+    padding: 40px 0;
+    margin-right: 2%;
+    position: relative;
+    overflow: hidden;
+}
+
+.부모2 .강아지1 .나쁜자식 {
+    background-color: rgb(49, 128, 161);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0; left: 0;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5irbQW10419-b3MHQ9ZD2Wus4DZ1nSs8e-w&usqp=CAU);
+    background-position: cover;
+    transform: scaleX(0) rotate(720deg);
+    /* 투명도 */
+    transition: 0.5s cubic-bezier(0.24, 0.66, 0.08, 1.51)
+}
+
+.부모2 .강아지1:hover .나쁜자식 {
+    transform: scaleX(1.05) rotate(0deg);
+}
+
+.부모2 .강아지2 {
+    background-color: rgb(119, 236, 170);
+    color: aliceblue;
+    width: 49%;
+    float: left;
+    padding: 40px 0;
+    position: relative;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_4Qeik-QovZd-6OcITcf2AxNjZPj8g3Lszg&usqp=CAU);
+    background-position: center;
+    overflow: hidden;
+}
+
+.부모2 .강아지2 .나쁜자식 {
+    background-color: rgb(49, 128, 161);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0; 
+    left: 0;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5irbQW10419-b3MHQ9ZD2Wus4DZ1nSs8e-w&usqp=CAU);
+    background-position: center;
+    transform: scaleX(1) rotate(0deg);
+    transition:0.5s;
+}
+
+.부모2 .강아지2:hover .나쁜자식 {
+    transform: scaleX(0) rotate(720deg);
+}

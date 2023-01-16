@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.sec {
+    position: relative;
+    height: 100vh;
+    background: url(img/bg1.jpg) no-repeat center;
+    background-size: cover;
+    padding: 100px;
+    transition: 0.5s;
+}
+
+.sec header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+}
+
+.sec header img {
+    width: 80px;
+    height: 80px;
+}
+
+.sec .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sec .content .textBox {
+    width: 600px;
+}
+
+.sec .content .textBox h2 {
+    color: #fff;
+    font-size: 16px;
+    font-size: 4em; /* 1em -> font-size 100%, 기본 폰트사이즈는 16px */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.sec .content .textBox h2 span {font-size: 2em;}
+
+.sec .content .textBox p {color: #fff;}
+
+.sec .content .textBox a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #111;
+    padding: 8px 20px;
+    background: #fff;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.sec .content .imgBox {
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 50px 50px 0 0;
+}
+
+.sec .content .imgBox .pepsi {width: 260px;}
+
+.sec .content .txt {
+    position: absolute;
+    right: 10%; bottom: 10%;
+}
+
+.sec .content .txt .text1 {color: #fff; font-size: 80px; font-weight: bold;}
+
+.sec .content .txt .text2 {color: #fff; font-size: 60px; font-weight: bold;}
+
+.sec .content .thumb {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+}
+
+.sec .content .thumb li {
+    display: inline-block;
+    margin: 0 20px;
+    transition: 0.5s;
+}
+
+.sec .content .thumb li:hover {
+    transform: translateY(-15px);
+}
+
+.sec .content .thumb li img {
+    width: 40px;
+}

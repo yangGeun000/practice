@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TEST7</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .본체 {
+            background-color: green;
+            width: 300px;
+            text-align: center;
+            /* 인라인 요소를 가운데로 정렬 */
+            margin: auto;
+            /* 블럭 요소를 가운데로 정렬 */
+        }
+
+        .본체::before {
+            content: "비포";
+            background-color: aqua;
+            display: block;
+        }
+
+        .본체::after {
+            content: "에프터";
+            background-color: cornflowerblue;
+            display: block;
+        }
+
+        .본체2 {}
+
+        .본체2 span {
+            background-color: red;
+            color: #fff;
+            padding: 20px;
+        }
+
+        /* 인라인은 width개념이 없고, 글자의 크기만큼만 공간차지 */
+        /* margin,padding은 좌우만 적용 */
+    </style>
+</head>
+
+<body>
+    <div class="본체">본체</div>
+    <div class="본체2">본체<span>2</span></div>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST2</title>
+    <style>
+        *{margin:0; padding:0;}
+        .부모{height: 100px; background-color: lightblue;}
+        /* 띄워쓰기는 부모의 자손중에 첫째자식을 찾음 */
+        .부모 .첫째자식{height: 100px; background-color: green;}
+    </style>
+</head>
+
+<body>
+    <div class="부모">
+        첫째자식<br><br>
+        <div class="첫째자식">
+            <a href="https://www.w3schools.com/default.asp" class="버튼">둘째자식</a>
+        </div>
+        <!-- 한줄복사 : alt + shift + ↓
+        한줄씩이동 : alt + 방향키 위아래
+        줄중앙에서 아래로 커서이동 : ctrl + enter
+        줄 삭제 : ctrl + x  -->
+    </div>
+</body>
+
+</html>

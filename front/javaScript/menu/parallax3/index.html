@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <nav id="nav">
+    <h1>GREEN</h1>
+    <ul>
+        <li class="active"><a href="#">menu1</a></li>
+        <li><a href="#">menu2</a></li>
+        <li><a href="#">menu3</a></li>
+        <li><a href="#">menu4</a></li>
+        <li><a href="#">menu5</a></li>
+        <li><a href="#">menu6</a></li>
+    </ul>
+   </nav> 
+
+   <div id="contents">
+    <div id="section1">
+        <h2>1.가랑잎이 솔잎더러 <br>바스락거린다고 한다.</h2>
+    </div>
+    <div id="section2">
+        <h2>2.간에 붙었다 쓸개에<br>붙었다 한다.</h2>
+    </div>
+    <div id="section3">
+        <h2>3.개구리 올챙이 적 <br>생각을 못한다.</h2>
+    </div>
+    <div id="section4">
+        <h2>4.구슬이 서 말이라도 <br>꿰어야 보배</h2>
+    </div>
+    <div id="section5">
+        <h2>5.까마귀 날자 배 떨어진다.</h2>
+    </div>
+    <div id="section6">
+        <h2>6.낮말은 새가 듣고 <br>밤말은 쥐가 듣는다.</h2>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+
+    var nav = $('#nav ul li');
+    var cont = $('#contents>div');
+
+    nav.click(function(e){
+        //function 함수를 이벤트핸들러
+        //$(this) 클릭한 그것
+        //$(this).find('a').css({color:"red"})
+        e.preventDefault();
+        var target = $(this);
+        var index = target.index();
+        console.log(index)
+
+        var offset = cont.eq(index).offset().top;
+        //$('html, body').animate({실행문},시간)
+
+        $('html, body').animate({scrollTop:offset},600)
+    });
+</script>
+</body>
+</html>

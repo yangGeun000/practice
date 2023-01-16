@@ -1,0 +1,15 @@
+.content {
+  color: blue;
+}
+.content h2 {
+  color: red;
+}
+.content h2::after {
+  content: "";
+  position: relative;
+  top: 0;
+  left: 0;
+  background: green;
+  width: 20px;
+  height: 20px;
+}/*# sourceMappingURL=sytle.css.map */

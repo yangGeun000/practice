@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  *{margin: 0; padding: 0;}
+  ul,li{list-style: none;}
+  body{background: #555;}
+  .container{width: 1000px; margin: 0 auto;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul id="tutorial">
+            <li class="html">html</li>
+            <li class="css">css</li>
+            <li class="css3">css3</li>
+            <li class="JavaScript">JavaScript</li>
+            <li class="jQuery">jQuery</li>
+            <li class="blank"></li>
+        </ul>
+        <p id="portfolio">portfolio</p>
+    </div>
+    <script>
+        //id
+        let tutorial = document.getElementById('tutorial');
+        tutorial.style.backgroundColor="#0f0";
+
+        //tagName
+        let li = document.getElementsByTagName('li');//배열(값의 집합)
+        //변수의 주소를 가진다.
+        //배열은 콩껍질안에 콩처럼 값을 가진다.
+        console.log(li);
+        li[0].style.backgroundColor="#00f"; 
+        li[3].style.backgroundColor="#253"; 
+
+        //.length는 길이 ==> 갯수
+        for(i=0;i<li.length;i++){
+            li[i].style.color="#fff";
+        }
+
+       //class
+       var html=document.getElementsByClassName('html')[0];
+       html.style.backgroundColor="#953";
+
+       //css기법
+       var li2 = document.querySelector('#tutorial li');
+       console.log(li2);
+       li2.style.color="#00f";//하나만(첫째만 불러짐)
+
+       var li3 = document.querySelectorAll('#tutorial li');
+       console.log(li3);
+        for(var i=0; i<li3.length; i++){
+            li3[i].style.backgroundColor="#fff";
+        }
+    </script>
+</body>
+</html>

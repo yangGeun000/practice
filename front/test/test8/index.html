@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TEST8</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* margin은 중복된다면 상하는 높은 값이 적용, 좌우는 합산 */
+        .만일 {
+            background-color: rgb(0, 255, 195);
+            margin: 30px auto;
+            padding: 20px;
+            width: 900px;
+            text-align: center;
+        }
+
+        .만일 .만일첫째 {
+            background-color: rgb(9, 195, 58);
+            width: 32%;
+            float: left;
+            padding: 20px 0;
+            margin-right: 2%;
+        }
+
+        .만일 .만일둘째 {
+            background-color: rgb(47, 181, 150);
+            width: 32%;
+            float: left;
+            padding: 20px 0;
+            margin-right: 2%;
+        }
+
+        .만일 .만일셋째 {
+            background-color: rgb(37, 125, 163);
+            width: 32%;
+            float: left;
+            padding: 20px 0;
+        }
+
+        .만이 {
+            background-color: rgb(255, 0, 0);
+            margin: 30px auto;
+            width: 900px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .만이 .만이첫째 {
+            background-color: rgb(141, 26, 183);
+            float: left;
+            width: 23.5%;
+            padding: 20px 0;
+            margin-right: 2%;
+        }
+
+        .만이 .만이둘째 {
+            background-color: rgb(199, 59, 195);
+            float: left;
+            width: 23.5%;
+            padding: 20px 0;
+            margin-right: 2%;
+        }
+
+        .만이 .만이셋째 {
+            background-color: rgb(163, 37, 92);
+            float: left;
+            width: 23.5%;
+            padding: 20px 0;
+            margin-right: 2%;
+        }
+
+        .만이 .만이넷째 {
+            background-color: rgb(163, 37, 37);
+            float: left;
+            width: 23.5%;
+            padding: 20px 0;
+        }
+
+        .만삼 {
+            background-color: rgb(0, 55, 255);
+            margin: 30px auto;
+            width: 900px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .만삼 .만삼첫째 {
+            background-color: rgb(151, 144, 255);
+            float: left;
+            width: 49%;
+            padding: 20px 0;
+            margin-right: 2%;
+        }
+
+        .만삼 .만삼둘째 {
+            background-color: rgb(61, 72, 196);
+            float: left;
+            width: 49%;
+            padding: 20px 0;
+        }
+
+        .약을든남자::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="만일 약을든남자">
+        <div class="만일첫째">만일첫째</div>
+        <div class="만일둘째">만일둘째</div>
+        <div class="만일셋째">만일셋째</div>
+    </div>
+    <div class="만이 약을든남자">
+        <div class="만이첫째">만이첫째</div>
+        <div class="만이둘째">만이둘째</div>
+        <div class="만이셋째">만이셋째</div>
+        <div class="만이넷째">만이넷째</div>
+    </div>
+    <div class="만삼 약을든남자">
+        <div class="만삼첫째">만삼첫째</div>
+        <div class="만삼둘째">만삼둘째</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom 요소</title>
+</head>
+<body>
+    <h1 id="title">제목입니다.</h1>
+    <ul>
+        <li>어서오세요</li>
+        <li>그린컴퓨터학원</li>
+    </ul>
+    <button id="click">눌러주세요</button>
+    <script>
+        var title = document.getElementById("title");
+        var button = document.getElementById("click");
+        button.addEventListener("click",function(){
+            title.textContent="제목 재설정"
+        });
+
+        console.log(document); //window.consol.log() window가 생략되어 있음
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="text">0</div>
+    <div class="fixed_bg" data-0="background-color:rgb(112, 188, 32);"
+        data-1000="background-color:rgb(50, 50, 50); width:100%; height:100%; left:0%; top:0%;" data-2000="width:0%; height:0%; left:50%; top:50%;" data-3000 = "width:100%; height:100%; top:0%; left:0%;">
+    </div>
+
+    <section class="slide slide1" data-0="top:0%;" data-500="top:-100%;">
+        <div class="slide-content">
+            <h2>제목입니다(위로 올라갑니다)</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta omnis veritatis odit corporis dolorum
+                dolore!</p>
+        </div>
+    </section>
+    <!-- slide1 -->
+    <section class="slide slide2" data-500="opacity:0; transform:translateX(100%);"
+        data-1000="opacity:1; transform:translateX(0%);" data-2000="opacity:0;">
+        <div class="slide-content">
+            <h2>오른쪽에서 나와요. 투명도 있어요</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis modi explicabo quis sed omnis soluta
+                adipisci officiis velit nihil minima?</p>
+        </div>
+    </section>
+    <!-- slide2 -->
+    <section class="slide slide3" data-1000="opacity:0; top:-100%;" data-2000="opacity:1; top:0%;">
+        <div class="slide-content">
+            <h2>위에서 내려와요. 투명도 있어요</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur illo obcaecati omnis velit esse aperiam
+                delectus saepe blanditiis exercitationem error, quia odit nisi libero rem nemo odio tempora sed
+                deserunt.</p>
+        </div>
+    </section>
+    <!-- slide3 -->
+    <section class="slide slide4" data-2000="opacity:0;" data-3000="opacity:1;">
+        <div class="slide-content" data-2000="top:200px;" data-3000="top:0;">
+            <h2>이미지영역과 텍스트영역을 분류합니다</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quisquam necessitatibus maxime temporibus
+                quaerat nemo reprehenderit voluptatibus cupiditate natus error?</p>
+        </div>
+    </section>
+    <!-- slide4 -->
+    <section class="slide slide5" data-2500 = "top:100%; transform: translateY(0%) rotate(0deg);" data-3500 = "top:50%; transform: translateX(0%) rotate(90deg);" data-4500 = "transform:translateX(100%) rotate(90deg);">
+        <img src="img/shuttle.png" alt="shuttle">
+    </section>
+    <!-- slide5 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    <script>
+        var s = skrollr.init();
+
+        var text = document.querySelector('.text');
+
+        window.addEventListener('scroll', function () {
+            var wScroll = window.pageYOffset;
+            text.innerHTML = wScroll;
+        })
+    </script>
+</body>
+
+</html>

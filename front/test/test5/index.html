@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .아빠 {
+            background-color: #C8B6E2;
+        }
+
+        /* 띄우기 : 자손중에서, > : 자식중에서  */
+        .아빠 .첫째자식 {
+            float: right;
+            background-color: #A8A4CE;
+            width: 150px;
+        }
+
+        .아빠 .둘째자식 {
+            float: right;
+            background-color: #7A86B6;
+            width: 150px;
+        }
+
+        .아빠 .세째자식 {
+            float:right;
+            background-color: #495C83;
+            width: 150px;
+        }
+
+        .아빠 .치매약 {
+            clear: both;
+        }
+
+        .작은아빠 {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="아빠">
+        <div class="첫째자식">첫째자식</div>
+        <div class="둘째자식">둘째자식</div>
+        <div class="세째자식">세째자식</div>
+        <div class="치매약"></div>
+    </div>
+    <div class="작은아빠">작은아빠</div>
+</body>
+
+</html>

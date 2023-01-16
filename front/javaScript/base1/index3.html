@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //    비교연산자
+    //    a == b   :  a와b가 같은가? 같으면 TRUE 다르면 FALSE
+    //    a != b   :  a와b가 다른가? 다르면 TRUE 같으면 FALSE
+    //    a >= b   :  a가b보다 크거나 같은가?(이상) 참이면 TRUE 거짓이면 FALSE
+    //    a <= b   :  a가b보다 작거나 같은가?(이하) 참이면 TRUE 거짓이면 FALSE
+
+    //    논리연산자
+    //    a && b  : and연산자(그리고), 둘중에 하나라도 false이면 false
+    //    a || b  :or연산자(또는), 둘중에 하나라도 true이면 true
+    //     !a  :반대, a가 true 이면 false ,a가 false이면 true
+
+    var aa = 30;
+    var bb = 20;
+    if(aa<bb){
+        //조건이 참일때 실행문
+        document.write("그렇지~ <br>")
+    }else{
+        //조건이 거짓일때 실행문
+        document.write("아뉜데~ <br>")
+    }
+
+    var 나이 = 20;
+    var 입장료 ='';
+ 
+     if(나이<13){
+        입장료 ="2,000원"
+     }else{
+        입장료 ="4,000원"
+     }
+     document.write(입장료 + "<br>");
+
+
+     var cc = 5>2;
+     document.write( cc + "<br>");//true
+     var cc2 = 5<2;
+     document.write( cc2 + "<br>");//
+     var cc3 = (5 == 5);
+     document.write( cc3 + "<br>");//true
+     var cc4 = (5 == '5');
+     document.write( cc4 + "<br>");//true//다른언어에서는 false
+     var cc5 = (5 === '5');
+     document.write( cc5 + "<br>");//false
+     var cc6 = (5 != 6);  //5와 6이 다른가
+     document.write( cc6 + "<br>");//다르면 true
+
+
+
+     var 논리연산1 = (3>2)  &&  (5>3); //AND 연산자
+     document.write( 논리연산1 + "<br>");//TRUE
+
+     var 논리연산2 = (3<2)  &&  (5>3); //AND 연산자
+     document.write( 논리연산2 + "<br>");//false
+
+     var 논리연산3 = (3>2)  ||  (5>3); //OR 연산자
+     document.write( 논리연산3 + "<br>");//TRUE
+
+     var 논리연산4 = (3<2)  ||  (5>3); //OR 연산자
+     document.write( 논리연산4 + "<br>");//TRUE
+
+     var 논리연산5 = !(3<2);   //  NOT연산자
+     document.write( 논리연산5 + "<br>");//TRUE
+
+     var 논리연산6 = !(3>2);   //  NOT연산자
+     document.write( 논리연산6 + "<br>");//false
+    </script>
+</body>
+</html>

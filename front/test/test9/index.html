@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST9</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* margin은 중복된다면 상하는 높은 값이 적용, 좌우는 합산 */
+        .만일 {
+            background-color: rgb(0, 255, 195);
+            margin: 30px auto;
+            padding: 20px;
+            width: 900px;
+            text-align: center;
+        }
+
+        .만일>div {
+            width: 32%;
+            float: left;
+            padding: 20px 0;
+            margin-right: 2%;
+        }
+
+        .만일:after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+
+        .만일 .만일첫째 {
+            background-color: rgb(9, 195, 58);
+
+        }
+
+        .만일 .만일둘째 {
+            background-color: rgb(47, 181, 150);
+        }
+
+        .만일 .만일셋째 {
+            background-color: rgb(37, 125, 163);
+            margin: 0;
+        }
+
+        .만이 {
+            background-color: rgb(255, 0, 0);
+            margin: 30px auto;
+            width: 900px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .만이>div {
+            float: left;
+            width: 23.5%;
+            padding: 20px 0;
+            margin-right: 2%;
+        }
+
+        .만이:after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+
+        .만이 .만이첫째 {
+            background-color: rgb(141, 26, 183);
+
+        }
+
+        .만이 .만이둘째 {
+            background-color: rgb(199, 59, 195);
+
+        }
+
+        .만이 .만이셋째 {
+            background-color: rgb(163, 37, 92);
+
+        }
+
+        .만이 .만이넷째 {
+            background-color: rgb(163, 37, 37);
+            margin: 0;
+        }
+
+        .만삼 {
+            background-color: rgb(0, 55, 255);
+            margin: 30px auto;
+            width: 900px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .만삼:after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+
+        .만삼>div:hover {
+            background-position: center;
+            transition: 0.5s;
+            background-image: url(img2.jpg);
+            background-size: 140%;
+        }
+
+        .만삼 .만삼첫째 {
+            background-color: rgb(151, 144, 255);
+            padding: 20px 0;
+            margin-bottom: 2%;
+        }
+
+        .만삼 .만삼둘째 {
+            background-color: rgb(61, 72, 196);
+            padding: 20px 0;
+            background-image: url(img.jpg);
+            background-size: 100%;
+        }
+
+        .만사 {
+            background-color: rgb(230, 251, 1);
+            margin: 30px auto;
+            width: 900px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .만사>div {
+            float: left;
+            width: 18.4%;
+            padding: 20px 0;
+            margin-right: 2%;
+            transition: 0.3s;
+        }
+        .만사>div:hover{border-radius: 50px;}
+        .만사:after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+
+        .만사 .만사첫째 {
+            background-color: rgb(139, 183, 26);
+
+        }
+
+        .만사 .만사둘째 {
+            background-color: rgb(166, 199, 59);
+
+        }
+
+        .만사 .만사세째 {
+            background-color: rgb(140, 163, 37);
+
+        }
+
+        .만사 .만사네째 {
+            background-color: rgba(140, 163, 37, 0.581);
+        }
+
+        .만사 .만사다섯째 {
+            background-color: rgb(159, 163, 37);
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="만일">
+        <div class="만일첫째">만일첫째</div>
+        <div class="만일둘째">만일둘째</div>
+        <div class="만일셋째">만일셋째</div>
+    </div>
+    <div class="만이">
+        <div class="만이첫째">만이첫째</div>
+        <div class="만이둘째">만이둘째</div>
+        <div class="만이셋째">만이셋째</div>
+        <div class="만이넷째">만이넷째</div>
+    </div>
+    <div class="만삼">
+        <div class="만삼첫째">만삼첫째</div>
+        <div class="만삼둘째">만삼둘째</div>
+    </div>
+    <div class="만사">
+        <div class="만사첫째">만사첫째</div>
+        <div class="만사둘째">만사둘째</div>
+        <div class="만사세째">만사세째</div>
+        <div class="만사네째">만사네째</div>
+        <div class="만사다섯째">만사다섯째</div>
+    </div>
+</body>
+
+</html>

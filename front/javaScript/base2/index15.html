@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div class="time"></div>
+    <script>
+        // var now = new Date();
+        // console.log(now);
+        // var disp= now.toLocaleTimeString();
+        // console.log(disp);
+
+        time();
+        function time(){
+            var now = new Date();
+            var disp= now.toLocaleTimeString();
+            console.log(disp);
+            var nowtime = document.querySelector('.time');
+            nowtime.innerHTML="현재시각 : " + disp;
+            window.requestAnimationFrame(time);
+        }
+    </script>
+</body>
+</html>

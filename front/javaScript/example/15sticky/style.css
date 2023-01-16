@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.wrap {}
+
+.top_box {
+    height: 100vh;
+    position: relative;
+    background: #080808;
+}
+
+.top_box h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #333;
+    font-size: 80px;
+}
+
+.fix_motion {
+    background: blue;
+}
+
+.fix_motion .fix_wrap {
+    height: 400vh;
+}
+
+.fix_motion .device_fix {
+    /* 평소에는 static 처럼 
+    영역에 들어오면 fixed처럼 동작, left조절안됨 */
+    position: sticky;
+    top: 0;
+}
+
+.fix_motion .inner {
+    overflow: hidden;
+    height: 100vh;
+}
+
+.fix_motion .slide_wrap {
+    position: relative;
+    height: 100vh;
+}
+
+.fix_motion .slide {
+    position: absolute;
+    width: 400vw;
+    transition: 0.5s;
+}
+
+.fix_motion .slide .child {
+    position: relative;
+    float: left;
+    width: 100vw;
+    height: 100vh;
+}
+
+.fix_motion .slide .child h2{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* transform: translate(100%, -50%);
+    opacity: 0; */
+    color: #333;
+    font-size: 80px;
+    transition: 0.5s 0.2s;
+}
+
+.fix_motion .slide .child.active h2{
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.fix_motion .slide .child1 {background: red;}
+
+.fix_motion .slide .child2 {background: blue;}
+
+.fix_motion .slide .child3 {background: green;}
+
+.fix_motion .slide .child4 {background: pink;}

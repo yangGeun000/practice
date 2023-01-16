@@ -1,0 +1,227 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+/* font-family: 'Oswald', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+body {}
+
+#wrap {
+    height: 100vh;
+    background: url(images/bg-main.jpg) no-repeat;
+    background-size: cover;
+}
+
+header {
+    /* flex 블록들을 옆으로 정렬 */
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 20px 150px 10px;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.5);
+}
+
+header .header_menu ul {
+    display: flex;
+}
+
+header .header_menu ul li {
+    margin-right: 40px;
+}
+
+header .header_icon i {
+    font-size: 21px;
+    color: #fff;
+}
+
+.slick {
+    padding-top: 10px;
+}
+
+.slick .slick-slide {
+    /* .slick img의 postion 기준을 여기로 잡아주기 위해 relative를 부여  */
+    position: relative;
+}
+
+.slick .left {
+    height: 70vh;
+}
+
+.slick .left h2 {
+    position: absolute;
+    left: 75px;
+    top: 0;
+    color: #fff;
+    font-size: 230px;
+    letter-spacing: 30px;
+    line-height: 272px;
+}
+
+.slick img {
+    position: absolute;
+    width: 1000px;
+    left: 50px;
+    top: 0;
+}
+
+.slick .right {
+    position: absolute;
+    right: 10%;
+    top: 70px;
+    width: 400px;
+    height: 400px;
+    background: none;
+    color: #fff;
+}
+
+.slick .right .nike_star {}
+
+.slick .right .nike_star em {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 80px;
+    transform: translateX(200px);
+    transition: 1.5s;
+    opacity: 0;
+}
+
+.slick .slick-active .right .nike_star em {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.slick .right .nike_star .star {
+    display: inline-block;
+    /* vertical-align inline 요소 수직 이동 */
+    vertical-align: -20px;
+    transform: translateX(200px);
+    opacity: 0;
+    transition: 2s;
+}
+
+.slick .slick-active .right .nike_star .star {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.slick .right .nike_star .star i {
+    font-size: 18px;
+    color: yellow;
+    margin-left: 10px;
+}
+
+.slick .right .nike_star .retro {
+    font-size: 30px;
+    line-height: 35px;
+    transform: translateX(200px);
+    opacity: 0;
+    transition: 2s 1s;
+}
+
+.slick .slick-active .right .nike_star .retro {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.slick .right .nike_star .desc {
+    padding-top: 10px;
+}
+
+.slick .right .nike_star .desc ul {}
+
+.slick .right .nike_star .desc ul li:nth-child(2) {
+    padding-top: 20px;
+}
+
+.slick .right .nike_star .btn {
+    padding-top: 20px;
+}
+
+.slick .right .nike_star .btn ul {
+    display: flex;
+}
+
+.slick .right .nike_star .btn ul li {
+    margin-right: 10px;
+}
+
+.slick .right .nike_star .btn select {
+    background: yellow;
+    padding: 2px 5px;
+    border: none;
+    outline: none;
+}
+
+.slick .right .nike_star .btn ul li:nth-child(2) {
+    border: 1px solid #fff;
+    margin-top: -7px;
+}
+
+.slick .right .nike_star .btn ul li:nth-child(2) a {
+    display: block;
+    padding: 5px 15px;
+}
+
+/* slide-button */
+.slick .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0;
+    height: 0;
+    background: none;
+    border: none;
+}
+
+.slick .slick-prev {
+    left: 2%;
+    z-index: 100;
+}
+
+.slick .slick-prev::before {
+    content: "\f0a8";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.slick .slick-prev::before:hover {
+    color: skyblue;
+}
+
+.slick .slick-next {
+    right: 2%;
+}
+
+.slick .slick-next::before {
+    content: "\f0a9";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.slick .slick-next::before:hover {
+    color: skyblue;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>type 속성</legend>
+            <p>아이디 : <input type="text"> </p>
+            <p>비밀번호 : <input type="password"> </p>
+            <p>이메일 : <input type="email" autocomplete="off"> </p>
+            <p>전화번호 : <input type="tel" autocomplete="off"> </p>
+            <p>예<input type="radio" name="receive" checked></p>
+            <p>아니오<input type="radio" name="receive"></p>
+            <p>HTML <input type="checkbox"></p>
+            <p>CSS <input type="checkbox"></p>
+            <p>MySQL <input type="checkbox"></p>
+            <p>
+                <input type="button" value="확인">
+                <input type="reset" value="취소">
+            </p>
+            <p><input type="file"></p>
+            <p>가입목적 : <br> <textarea cols="30" rows="5"></textarea></p>
+            <p>전화번호 :
+                <select>
+                    <option>지역번호</option>
+                    <option selected>02</option>
+                    <option>031</option>
+                    <option>044</option>
+                </select></p>
+            <h3>필드에 입력형식 힌트주기</h3>
+            <p>
+                <label for="id">아이디</label>
+                <input type="text" id="id" placeholder="아이디" title="아이디 입력" required>
+            </p>
+            <p>
+                <label for="pw">비밀번호</label>
+                <input type="password" id="pw" placeholder="비밀번호" title="비밀번호 입력"required>
+            </p>
+            <p><input type="submit" value="전송"></p>
+        </fieldset>
+    </form>
+</body>
+
+</html>
